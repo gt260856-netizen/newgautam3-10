@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gautam Jha | Free Stock Market Learning</title>
+<meta name="description" content="Clear up common stock market myths and learn the basics in simple English with Gautam Jha. Educational content only.">
+<meta name="theme-color" content="#111317">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1064158929575854');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1064158929575854&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<style>
+  /* Theme: GRAPHITE CHAMPAGNE — graphite black, champagne-gold CTA, soft teal "fact" marks; Myth vs Fact structure */
+  :root{
+    color-scheme:dark;
+    --bg:#111317; --panel:rgba(30,33,40,.6); --edge:rgba(230,194,122,.2);
+    --text:#f5f3ee; --muted:#a3a6ae; --soft:#d8d8d4;
+    --gold:#e6c27a; --gold2:#f1d69c; --teal:#7fd1c7; --myth:#8b8f99;
+    --en:"Hanken Grotesk",-apple-system,"Segoe UI",Roboto,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--en);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;
+       min-height:100vh;overflow-x:hidden;
+       background-image:radial-gradient(ellipse 80% 40% at 50% 0%,rgba(230,194,122,.10),transparent 70%)}
+
+  .wrap{max-width:430px;margin:0 auto;padding:calc(18px + env(safe-area-inset-top)) 16px calc(18px + env(safe-area-inset-bottom));
+        display:flex;flex-direction:column;gap:10px}
+  .glass{background:var(--panel);border:1px solid var(--edge);border-radius:22px;
+         -webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+
+  .card{padding:20px 18px 18px}
+  .who{display:flex;align-items:center;gap:11px}
+  .av{width:46px;height:46px;border-radius:50%;position:relative;overflow:hidden;flex:0 0 auto;display:grid;place-items:center;
+      background:#262a33;border:1.5px solid var(--gold);font-weight:800;font-size:15px;color:var(--gold)}
+  .av img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .who b{display:block;font-size:16px;font-weight:800;line-height:1.2}
+  .who small{display:block;font-size:12px;color:var(--muted)}
+
+  h1{margin-top:16px;font-size:26px;line-height:1.2;font-weight:900;letter-spacing:-.4px;text-wrap:balance}
+  h1 span{color:var(--gold)}
+  .sub{margin-top:6px;font-size:14px;color:var(--soft)}
+
+  .mfs{margin-top:14px;display:grid;gap:8px}
+  .mf{border-radius:16px;background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.08);overflow:hidden}
+  .mf p{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;font-size:13.5px;line-height:1.45}
+  .mf i{display:block;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:1px}
+  .ic{flex:0 0 auto;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;margin-top:2px}
+  .myth{color:var(--myth)}
+  .myth .ic{color:var(--myth);background:rgba(139,143,153,.15)}
+  .myth s{text-decoration-color:rgba(139,143,153,.6)}
+  .fact{color:var(--text);background:rgba(127,209,199,.06);border-top:1px solid rgba(255,255,255,.06)}
+  .fact .ic{color:#0f2a27;background:var(--teal)}
+  .fact i{color:var(--teal)}
+
+  /* CTA: light shine sweep */
+  .cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin-top:16px;padding:15px 14px;border-radius:14px;
+       text-decoration:none;color:#1d1606;font-weight:900;font-size:17px;line-height:1.3;
+       background:linear-gradient(100deg,var(--gold),var(--gold2));
+       box-shadow:0 8px 22px rgba(230,194,122,.22);transition:transform .15s}
+  .cta::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+       background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 3.4s ease-in-out infinite}
+  .cta:active{transform:scale(.97)}
+  .cta:focus-visible{outline:2px solid #fff;outline-offset:3px}
+  @keyframes shine{0%,55%{left:-60%}100%{left:130%}}
+
+  .timer{display:flex;align-items:center;justify-content:center;gap:11px;margin-top:12px;font-size:13px;color:var(--soft);text-align:left}
+  .ring{width:38px;height:38px;position:relative;flex:0 0 auto}
+  .ring svg{transform:rotate(-90deg)}
+  .ring .bg{stroke:rgba(255,255,255,.1)}
+  .ring .fg{stroke:var(--gold);stroke-linecap:round;transition:stroke-dashoffset 1s linear}
+  .ring b{position:absolute;inset:0;display:grid;place-items:center;font-weight:900;font-size:14px;color:var(--gold)}
+  .free{margin-top:8px;text-align:center;font-size:12px;color:var(--muted)}
+
+  .disc{padding:11px 13px;font-size:10.5px;line-height:1.65;color:var(--soft);border-radius:16px;border-color:rgba(127,209,199,.2)}
+  .disc b{color:var(--teal)}
+  .foot{text-align:center;font-size:11px;line-height:1.6;color:var(--muted);padding:2px 6px}
+  .foot a{color:var(--muted)}
+
+  @media(prefers-reduced-motion:reduce){.cta::after{animation:none}.ring .fg{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <main class="card glass">
+    <div class="who">
+      <div class="av"><img src="https://github.com/growoneads/s/releases/download/j/gautamjha101.jpg" alt="Gautam Jha" width="46" height="46" fetchpriority="high" onerror="this.remove()">GJ</div>
+      <div><b>Gautam Jha</b><small>Free stock market learning</small></div>
+    </div>
+
+    <h1>Stock market myths, <span>cleared up</span></h1>
+    <p class="sub">Common beginner beliefs, and what is actually true.</p>
+
+    <div class="mfs">
+      <div class="mf">
+        <p class="myth"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span><i>Myth</i><s>You need a big amount to start learning.</s></span></p>
+        <p class="fact"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><i>Fact</i>You can learn the concepts first, without putting any money in.</span></p>
+      </div>
+      <div class="mf">
+        <p class="myth"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><span><i>Myth</i><s>Trading is all about getting tips.</s></span></p>
+        <p class="fact"><span class="ic"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></span><span><i>Fact</i>Good traders follow their own plan and manage risk on every trade.</span></p>
+      </div>
+    </div>
+
+    <a href="#" class="cta js-cta">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="#1d1606" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71l-4.14-3.06-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+      Join Free Telegram Channel
+    </a>
+
+    <div class="timer js-timer-line">
+      <div class="ring">
+        <svg width="38" height="38" viewBox="0 0 44 44">
+          <circle class="bg" cx="22" cy="22" r="19" fill="none" stroke-width="4"/>
+          <circle class="fg js-ring" cx="22" cy="22" r="19" fill="none" stroke-width="4" stroke-dasharray="119.4" stroke-dashoffset="0"/>
+        </svg>
+        <b class="js-timer">8</b>
+      </div>
+      <div>Channel opens automatically</div>
+    </div>
+    <p class="free">100% Free • No payment • Leave anytime</p>
+  </main>
+
+  <div class="disc glass">
+    <p><b>Disclaimer:</b> All content is for educational purposes only and is not investment advice or a buy/sell recommendation. We are not SEBI-registered advisors. Trading involves risk, including loss of capital. Past performance does not guarantee future results.</p>
+  </div>
+
+  <div class="foot">
+    © <span id="yr"></span> Gautam Jha • <a href="#">Privacy Policy</a> • <a href="#">Terms</a><br>
+    This site is not a part of the Facebook website or Meta Platforms, Inc.
+  </div>
+</div>
+
+<script>
+(function () {
+  // ================= SETTINGS =================
+  var TG_LINK = "https://t.me/+WMwqYioaehAyNTc1";
+  var AUTO_REDIRECT = true;   // false = sirf button se Telegram khulega
+  var TIMER_SECONDS = 8;
+  var RETURN_DELAY_MS = 300;  // dobara aane wale ko kitni jaldi bhejna hai
+  var EVENT_DELAY_MS = 600;   // event bhejne ke baad redirect se pehle ka wait (slow network ke liye)
+  // ============================================
+
+  var KEY_VISITED = "rtt_visited", KEY_EVT = "rtt_sub";
+  var loadTime = Date.now();
+  document.getElementById("yr").textContent = new Date().getFullYear();
+
+  function setFlag(k){
+    try{localStorage.setItem(k,"1")}catch(e){}
+    document.cookie = k+"=1; max-age="+(60*60*24*180)+"; path=/; SameSite=Lax";
+  }
+  function hasFlag(k){
+    try{ if(localStorage.getItem(k)) return true }catch(e){}
+    return document.cookie.indexOf(k+"=1") !== -1;
+  }
+  function goTelegram(){ setFlag(KEY_VISITED); window.location.href = TG_LINK; }
+  function isVisible(){ return document.visibilityState === "visible"; }
+
+  // TEST MODE: URL ke end me ?test lagao -> purane flags mit jayenge, har baar page normal khulega
+  if (/[?&]test\b/.test(location.search)) {
+    [KEY_VISITED, KEY_EVT].forEach(function(k){
+      try{localStorage.removeItem(k)}catch(e){}
+      document.cookie = k+"=; max-age=0; path=/; SameSite=Lax";
+    });
+  }
+
+  // Condition 1: asli interaction (touch / scroll / mouse / keyboard)
+  var interacted = false;
+  function markHuman(e){ if (e && e.isTrusted === false) return; interacted = true; }
+  ["pointerdown","touchstart","mousemove","keydown","wheel"].forEach(function(ev){
+    window.addEventListener(ev, markHuman, {passive:true, capture:true});
+  });
+  window.addEventListener("scroll", markHuman, {passive:true});
+
+  // Subscribe: sirf ek baar, bot filter ke saath
+  // source = "click" (button) ya "timer" (auto redirect)
+  // return true = event gaya
+  function fireEventOnce(e, source){
+    if (hasFlag(KEY_EVT)) return false;                 // Condition 4: pehle lag chuka
+    if (navigator.webdriver) return false;              // Condition 3: bot / automation
+    if (!interacted) return false;                      // Condition 1: koi asli interaction nahi
+    if (source === "click") {
+      if (Date.now() - loadTime < 800) return false;    // bahut jaldi click
+      if (e && e.isTrusted === false) return false;     // script se fake click
+    }
+    if (source === "timer" && !isVisible()) return false; // Condition 2: page screen par nahi
+    if (typeof fbq !== "function") return false;
+    fbq("track","Subscribe",{},{eventID:"rtt_sub_"+loadTime});
+    setFlag(KEY_EVT);
+    return true;
+  }
+
+  var cta = document.querySelector(".js-cta");
+  var timerLine = document.querySelector(".js-timer-line");
+  var timerEl = document.querySelector(".js-timer");
+  var ring = document.querySelector(".js-ring");
+  var C = 119.4, countdown, leaving = false;
+
+  cta.href = TG_LINK;
+  cta.addEventListener("click", function(e){
+    e.preventDefault();
+    if (leaving) return;
+    leaving = true;
+    if (countdown) clearInterval(countdown);
+    var sent = fireEventOnce(e, "click");
+    setTimeout(goTelegram, sent ? EVENT_DELAY_MS : 300);
+  });
+
+  // Condition 5: returning visitor -> timer skip, turant Telegram, koi event nahi
+  if (hasFlag(KEY_VISITED)) {
+    timerLine.innerHTML = "<div>Opening channel…</div>";
+    setTimeout(goTelegram, RETURN_DELAY_MS);
+    return;
+  }
+
+  if (!AUTO_REDIRECT) { timerLine.style.display = "none"; return; }
+  var left = TIMER_SECONDS;
+  function paint(){
+    timerEl.textContent = left;
+    ring.style.strokeDashoffset = (C * (1 - left / TIMER_SECONDS)).toFixed(1);
+  }
+  paint();
+  // Condition 2: page chhupa ho (doosra app/tab) to timer ruk jata hai
+  countdown = setInterval(function(){
+    if (!isVisible() || leaving) return;
+    left--; paint();
+    if (left <= 0){
+      clearInterval(countdown);
+      leaving = true;
+      var sent = fireEventOnce(null, "timer");
+      setTimeout(goTelegram, sent ? EVENT_DELAY_MS : 0);
+    }
+  }, 1000);
+})();
+</script>
+</body>
+</html>
